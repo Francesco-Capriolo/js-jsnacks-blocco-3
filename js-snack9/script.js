@@ -11,6 +11,8 @@ let listEven = [];
 
 //creo una variabile
 let sum = 0;
+//contenitore
+let i = 0;
 
 //Continua a chiedere i numeri all'utente e a inserirli nell'array
 // fino a quando la somma degli elementi è minore di 200.
@@ -18,14 +20,15 @@ while (sum < 200) {
     // li inserisco nella lista
     list.push(parseInt(prompt("Inserisci i numeri")));
     //se i numeri sono pari li pusho nell'array(listEven)
-    if (list % 2 == 0) {
-        listEven = listEven.concat(list);
+    if (list[i] % 2 == 0) {
+        listEven.push(list[i]);
     } else {
-        listOdd = listOdd.concat(list);
+        listOdd.push(list[i]);
     }
 
     //prendo la somma e aggiungo all'indice indicato tra le quadre dell'array
     sum += list[list.length - 1]
+    i++;
 
 }
 

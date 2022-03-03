@@ -19,14 +19,17 @@ if (userNumber >= 100) {
     userNumber = 100;
 }
 
+let randomArray = [];
 // creo un ciclo che mi apro un array dove la lunghezza max dell'
 // array è di 10 ed inserisco un numero randomico fino a 4532
 // fino al riempimento dell' array
 for (i = 0; i < userNumber; i++) {
     const tempArray = [];
-    while (tempArray.lenght < 10) {
-        tempArray.push(Math.floor(Math.random() * 4532));
-        tempArray++;
+    while (tempArray.length < 10) {
+        tempArray.push(Math.floor(Math.random() * (4532 - 1) + 1));
     }
     console.log(tempArray);
+    randomArray.push(tempArray);
 }
+
+console.log(randomArray);
